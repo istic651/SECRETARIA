@@ -47,17 +47,26 @@ require_once 'conexion.php';
                  $rows = $resultado;
                 
          }
+         if($rows > 0){
+             //validacion para que no se carguen materias repetidas
            foreach($rows as $row)
                  {
-                     if($row != $materia){
+               $materias = $_POST['materia'];
+                     if($row != $materias){
                         $insert= new Materias($docente,$materia,$anio);
                         $insert->enviar();
-                        header('Location: ../../index.php');
+                          header('Location: materias.php');
                      } else{
                          echo "fallastes";
+                         header('Location: materias.php');
                      }
                  }
-        
+         }elseif($rows < 1)
+         {
+             $insert= new Materias($docente,$materia,$anio);
+                        $insert->enviar();
+                        header('Location: materias.php');
+         }
      }
     }
    
@@ -68,27 +77,26 @@ require_once 'conexion.php';
                                 $resultados = mysqli_query($enlace, $sql); while($resultado=mysqli_fetch_assoc($resultados))
                                             { 
                                     ?>
-                                <form action="eliminar.php" method="GET">
+                             
                                            <?php
                                             echo 
                                            '<tr><td>'.$resultado["Idmateria"].'</td>
                                             <td>'.$resultado["profesorAsignado"].'</td>
                                             <td>'.$resultado["materia"].'</td>
                                             <td>'.$resultado["anio"].'</td>
-                                            <td>'.'<a href="edicion.php?no='.$resultado['Idmateria'].'"><button type="button" class="btn btn-primary">'."modificar".'</button></a>'.'</td>'
-                                           .'<td>'.'<a href=eliminar.php?lo='.$resultado['Idmateria'].'"><button type="button" name = "elimina" class="btn btn-danger" >'."Eliminar".'</button></a>'.'</td>'
+                                            <td>'.'<a href="edicion.php?no='.$resultado['Idmateria'].'"><button type="button" name = "modificar" class="btn btn-primary">'."modificar".'</button></a>'.'</td>'
+                                           .'<td>'.'<a href=eliminar.php?lo='.$resultado['Idmateria'].'"><button type="button" name ="elimina" class="btn btn-danger" >'."Eliminar".'</button></a>'.'</td>'
                                            .
                                            '</tr>';
+                            
                                     ?>
-                                </form>
-                                            <?php
+                                <?php
 
+                        
                                             }
 
-        
-    
         } 
-   
+  
        
 
   /*

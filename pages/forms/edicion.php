@@ -20,7 +20,7 @@
         <link href="../../css/timepicker/bootstrap-timepicker.min.css" rel="stylesheet"/>
         <!-- Theme style -->
         <link href="../../css/AdminLTE.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/edicion.css">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -67,15 +67,6 @@
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
                     </div>
-                    <!-- search form -->
-                    <form action="#" method="get" class="sidebar-form">
-                        <div class="input-group">
-                            <input type="text" name="q" class="form-control" placeholder="Search..."/>
-                            <span class="input-group-btn">
-                                <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
-                            </span>
-                        </div>
-                    </form>
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
@@ -150,25 +141,41 @@
                                 </div>
                                 <form action="editar.php" method="post">
                                 <div class="box-body">
-                                    <div class="form-group">
-                                        <label>Código materia</label>
-                                    </div><!-- /.form group -->
+                                   <div class="form-group">
+                                       <div class="input-group">
+                                       <input type="text" id="escondido" name="escondido" value="
+                                            <?php
+  $enlace = mysqli_connect("localhost", "root", "","istic");
+  $cod = $_GET["no"];
+  $sql = "SELECT * FROM materias WHERE Idmateria = '$cod'";
+  $query = mysqli_query($enlace, $sql);
+  while($resul=mysqli_fetch_assoc($query))
+  {
+       echo $resul['Idmateria'];
+  }
+                                                   ?>
+                                            ">
+                                          
+                                       </div>
+                                   </div>
                                     <div class="form-group">
                                         <label>Docente</label>
                                         <div class="input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-fw fa-male"></i>
                                             </div>
-                                            <input type="text" class="form-control" id="docenteId" name="docente" placeholder="ingrese docente" value="
+                                            <input type="text" class="form-control" id="docenteId" name="docente" placeholder="ingrese docente" 
+                                            value="
                                             <?php
-                                            include ('funciones.php');
-                                            $cod=$_GET['lo'];
-                                             $enlace = mysqli_connect("localhost", "root", "","istic");  
-                                            $sql = "SELECT * FROM materias WHERE Idmateria = '$cod'";
-                                            
-                                            echo $resultado["profesorAsignado"];
-                                            
-                                            ?>
+  $enlace = mysqli_connect("localhost", "root", "","istic");
+  $cod = $_GET["no"];
+  $sql = "SELECT * FROM materias WHERE Idmateria = '$cod'";
+  $query = mysqli_query($enlace, $sql);
+  while($resul=mysqli_fetch_assoc($query))
+  {
+      echo $resul['profesorAsignado'];
+  }
+                                                   ?>
                                             ">
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
@@ -180,7 +187,18 @@
                                                 <i class="fa fa-fw fa-pencil-square-o"></i> 
                                             </div>
                                             <input type="text" class="form-control"
-                                            id="materiaId" name="materia" placeholder="materia"/>
+                                            id="materiaId" name="materia" placeholder="materia" value="
+      <?php
+  $enlace = mysqli_connect("localhost", "root", "","istic");
+  $cod = $_GET["no"];
+  $sql = "SELECT * FROM materias WHERE Idmateria = '$cod'";
+  $query = mysqli_query($enlace, $sql);
+  while($resul=mysqli_fetch_assoc($query))
+  {
+      echo $resul['materia'];
+  }
+                                                   ?>                                      
+                                            "/>
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
 
@@ -193,22 +211,53 @@
                                             </div>
                                               <div>
                                                 <select name="anio" class="form-control form-control-sm">
-                                                          <option value="1">Primero</option>
-                                                          <option value="2">Segundo</option>
-                                                          <option 
-                                                          value="3">Tercero</option>
+                                                    <option value="
+<?php
+  $enlace = mysqli_connect("localhost", "root", "","istic");
+  $cod = $_GET["no"];
+  $sql = "SELECT * FROM materias WHERE Idmateria = '$cod'";
+  $query = mysqli_query($enlace, $sql);
+  while($resul=mysqli_fetch_assoc($query))
+  {
+      echo $resul['anio'];
+  }
+                                                   ?> 
+                                                        " selected>
+                                                        <?php
+  $enlace = mysqli_connect("localhost", "root", "","istic");
+  $cod = $_GET["no"];
+  $sql = "SELECT * FROM materias WHERE Idmateria = '$cod'";
+  $query = mysqli_query($enlace, $sql);
+  while($resul=mysqli_fetch_assoc($query))
+  {
+    if($resul['anio'] == 1)
+    {
+        echo "primero";
+    }elseif($resul['anio'] == 2)
+    {
+       echo "segundo"; 
+    }elseif($resul['anio'] == 3)
+    {
+        echo "tercero";
+    }
+      
+  }
+   
+                                                   ?> 
+                                                        </option>
+                                                         <option value="1">primero</option><option value="2">segundo</option><option value="3">tercero</option>
                                                           
                                                 </select>
                                               </div>
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
-
-                                </div><!-- /.box-body -->
-                                    <div class="buttons">
+   <div class="buttons">
                                         <div>
-                                           <button type="submit" class="btn btn-primary">Enviar</button>
+                                           <button type="submit" class="btn btn-primary" name="actualiza">Enviar</button>
                                         </div>
                                     </div>
+                                </div><!-- /.box-body -->
+                                 
                                 </form>
                             </div><!-- /.box -->
                         </div><!-- /.col (left) -->
