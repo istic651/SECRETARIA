@@ -93,9 +93,10 @@ require_once 'conexion.php';
     }
    function imprimirTabla()
     {
-                               $enlace = mysqli_connect("localhost", "root", "","istic");
+                                $enlace = mysqli_connect("localhost", "root", "","istic");
                                 $sql = "SELECT * FROM profesores";
-                                $resultados = mysqli_query($enlace, $sql); while($resultado=mysqli_fetch_assoc($resultados))
+                                $resultados = mysqli_query($enlace, $sql); 
+       while($resultado=mysqli_fetch_assoc($resultados))
                                             { 
                                     ?>
                              
