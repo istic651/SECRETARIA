@@ -68,7 +68,7 @@ require_once 'conexion.php';
                 
          }
          if($rows > 0){
-             //validacion para que no se carguen materias repetidas
+             //validacion para que no se carguen docentes repetidos
            foreach($rows as $row)
                  {   
                $DNI = $_POST['Dni'];

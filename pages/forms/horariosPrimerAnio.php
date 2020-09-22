@@ -133,7 +133,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="materias.php"><i class="fa fa-angle-double-right"></i> Materias</a></li>
-                                <li><a href="materiasCorrelativas.php"><i class="fa fa-angle-double-right"></i> Materias correlitavas</a></li>
+                                <li><a href="pages/forms/materiasCorrelativas.php"><i class="fa fa-angle-double-right"></i> Materias correlitavas</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -146,11 +146,7 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Ingreso de materias
-                        <small>Complete el formulario por favor</small>
-                        <div class="principal">
-                         <a href="../..)index.php">Página principal</a>
-                        </div>
+                        ISTIC
                     </h1>
                 </section>
 
@@ -161,85 +157,21 @@
 
                             <div class="box box-danger">
                                 <div class="box-header">
-                                    <h3 class="box-title">Datos de la materia</h3>
+                                    <h3 class="box-title">Horarios Primer Año</h3>
                                 </div>
-                                <form action="funciones.php" method="post">
-                                <div class="box-body">
-                                    <!-- Date dd/mm/yyyy -->
-                                    <div class="form-group">
-                                        <label>Docente</label>
-                                        <div class="input-group">
-                                            <div class="input-group-addon">
-                                                <i class="fa fa-fw fa-male"></i>
-                                            </div>
-                                            <input type="text" class="form-control" id="docenteId" name="docente" placeholder="ingrese docente">
-                                        </div><!-- /.input group -->
-                                    </div><!-- /.form group -->
-                                    <!-- Date mm/dd/yyyy -->
-                                    <div class="form-group">
-                                       <label>Materia</label>
-                                        <div class="input-group">
-                                            <div class="input-group-addon">
-                                                <i class="fa fa-fw fa-pencil-square-o"></i> 
-                                            </div>
-                                            <input type="text" class="form-control"
-                                            id="materiaId" name="materia" placeholder="materia"/>
-                                        </div><!-- /.input group -->
-                                    </div><!-- /.form group -->
-
-                                    <!-- phone mask -->
-                                    <div class="form-group">
-                                        <label>Año</label>
-                                        <div class="input-group">
-                                            <div class="input-group-addon">
-                                                <i class="fa fa-phone"></i>
-                                            </div>
-                                              <div>
-                                                <select name="anio" class="form-control form-control-sm">
-                                                          <option value="1">Primero</option>
-                                                          <option value="2">Segundo</option>
-                                                          <option 
-                                                          value="3">Tercero</option>
-                                                          
-                                                </select>
-                                              </div>
-                                        </div><!-- /.input group -->
-                                    </div><!-- /.form group -->
-
+                                  <div class="box box-warning">
+                                <div class="box-header">                           
+                                </div><!-- /.box-header -->
+                                <div class="box-body no-padding">
+                                    <!--The calendar -->
+                                   <img src="HorarioPrimerA%C3%B1o.jpg">
                                 </div><!-- /.box-body -->
-                                    <div class="buttons">
-                                        <div>
-                                           <button type="submit" class="btn btn-primary">Enviar</button>
-                                        </div>
-                                    </div>
-                                </form>
                             </div><!-- /.box -->
+                                
+                         </div><!-- /.box -->
                         </div><!-- /.col (left) -->
                     </div><!-- /.row -->                    
-<div class="box">
-                                <div class="box-header">
-                                    <h3 class="box-title">Materias registradas hasta el momento</h3>                                    
-                                </div><!-- /.box-header -->
-                                <div class="box-body table-responsive">
-                                    <table id="example1" class="table table-bordered table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Id materia</th>
-                                                <th>Profesor de la asignatura</th>
-                                                <th>Asignatura</th>
-                                                <th>Año de la materia</th>
-                                                
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                           <?php
-                                                require_once('funciones.php');
-                                                imprimirTabla();
-                                            ?>  
-                                        </tbody>
-                                    </table>
-                                </div><!-- /.box-body -->
-                            </div><!-- /.box -->
+
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
