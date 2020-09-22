@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Sistema de Gestión | Istic</title>
+        <title>Sistema de Gestión | ISTIC</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -33,9 +33,9 @@
     <body class="skin-black">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="index.html" class="logo">
+            <a href="index.php" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
-                Istic
+                ISTIC
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">
@@ -70,7 +70,7 @@
                             <img src="img/avatar3.png" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
-                            <p>juan</p>
+                            <p>Juan</p>
 
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
@@ -81,6 +81,18 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         
+                                <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-bar-chart-o"></i>
+                                <span>Horarios Clases</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="pages/forms/horariosPrimerAnio.php"><i class="fa fa-angle-double-right"></i> Primer año </a></li>
+                                <li><a href="pages/forms/horariosSegundoAnio.php"><i class="fa fa-angle-double-right"></i> Segundo año </a></li>
+                                <li><a href="pages/forms/horariosTercerAnio.php"><i class="fa fa-angle-double-right"></i> Tercer año</a></li>
+                            </ul>
+                        </li>
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-bar-chart-o"></i>
@@ -100,7 +112,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/UI/general.html"><i class="fa fa-angle-double-right"></i> Inscripción Profesores</a></li>
+                                <li><a href="pages/forms/inscripcionProfesores.php"><i class="fa fa-angle-double-right"></i> Inscripción Profesores</a></li>
                                 <li><a href="pages/UI/icons.html"><i class="fa fa-angle-double-right"></i> Modificación Profesores</a></li>
                                 <li><a href="pages/UI/buttons.html"><i class="fa fa-angle-double-right"></i> Situación Profesores</a></li>
                             </ul>
@@ -122,8 +134,8 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/forms/materias.php" target="_blank" ><i class="fa fa-angle-double-right"></i> Materias</a></li>
-                                <li><a href="pages/forms/materiasCorrelativas.php" target="_blank"><i class="fa fa-angle-double-right"></i> Materias correlitavas</a></li>
+                                <li><a href="pages/forms/materias.php"><i class="fa fa-angle-double-right"></i> Materias</a></li>
+                                <li><a href="pages/forms/materiasCorrelativas.php"><i class="fa fa-angle-double-right"></i> Materias correlitavas</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -136,13 +148,10 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Dashboard
-                        <small>Control panel</small>
+                        Instituto Superior Tecnológico Inmaculada Concepción
+                        <small>Sistema de gestión Secretaria</small>
                     </h1>
-                    <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Dashboard</li>
-                    </ol>
+       
                 </section>
 
                 <!-- Main content -->
@@ -156,7 +165,7 @@
                     <!-- top row -->
                     <div class="row">
                         <div class="col-xs-12 connectedSortable">
-                            
+                         <img src="istic.jpeg">    
                         </div><!-- /.col -->
                     </div>
                     <!-- /.row -->
@@ -175,17 +184,6 @@
                             <!-- Custom tabs (Charts with tabs)-->
                           
                                                 
-                            <!-- Calendar -->
-                            <div class="box box-warning">
-                                <div class="box-header">                             
-                                </div><!-- /.box-header -->
-                                <div class="box-body no-padding">
-                                    <!--The calendar -->
-                                   
-                                </div><!-- /.box-body -->
-                            </div><!-- /.box -->
-
-                            <!-- quick email widget -->
                   
 
                         </section><!-- /.Left col -->

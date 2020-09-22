@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Sistema de Gestión | Istic</title>
+        <title>Sistema de Gestión | ISTIC</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -32,7 +32,7 @@
     <body class="skin-black">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="../../index.html" class="logo">
+            <a href="../../index.php" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 ISTIC
             </a>
@@ -78,10 +78,18 @@
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li>
-                            <a href="../widgets.html">
-                                <i class="fa fa-th"></i> <span>Materias</span> <small class="badge pull-right bg-green">new</small>
+                                     
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-bar-chart-o"></i>
+                                <span>Horarios Clases</span>
+                                <i class="fa fa-angle-left pull-right"></i>
                             </a>
+                            <ul class="treeview-menu">
+                                <li><a href="horariosPrimerAnio.php"><i class="fa fa-angle-double-right"></i> Primer año </a></li>
+                                <li><a href="horariosSegundoAnio.php"><i class="fa fa-angle-double-right"></i> Segundo año </a></li>
+                                <li><a href="horariosTercerAnio.php"><i class="fa fa-angle-double-right"></i> Tercer año</a></li>
+                            </ul>
                         </li>
                         <li class="treeview">
                             <a href="#">
@@ -102,20 +110,30 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../UI/general.html"><i class="fa fa-angle-double-right"></i> Inscripción Profesores</a></li>
+                                <li><a href="inscripcionProfesores.php"><i class="fa fa-angle-double-right"></i> Inscripción Profesores</a></li>
                                 <li><a href="../UI/icons.html"><i class="fa fa-angle-double-right"></i> Modificación Profesores</a></li>
                                 <li><a href="../UI/buttons.html"><i class="fa fa-angle-double-right"></i> Situación Profesores</a></li>
                             </ul>
                         </li>
-                        <li class="treeview active">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-edit"></i> <span>Mesa de Examenes</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="general.html"><i class="fa fa-angle-double-right"></i> Inscripciones</a></li>
-                                <li class="active"><a href="advanced.html"><i class="fa fa-angle-double-right"></i> Horarios Mesa Examen</a></li>
+                                <li><a href="advanced.html"><i class="fa fa-angle-double-right"></i> Horarios Mesa Examen</a></li>
                                 <li><a href="editors.html"><i class="fa fa-angle-double-right"></i> Alumnos Inscriptos</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-edit"></i> <span>Materias</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="materias.php"><i class="fa fa-angle-double-right"></i> Materias</a></li>
+                                <li><a href="pages/forms/materiasCorrelativas.php"><i class="fa fa-angle-double-right"></i> Materias correlitavas</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -134,11 +152,6 @@
                          <a href="../..)index.php">Página principal</a>
                         </div>
                     </h1>
-                    <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li><a href="#">Forms</a></li>
-                        <li class="active">Advanced Elements</li>
-                    </ol>
                 </section>
 
                 <!-- Main content -->
@@ -221,7 +234,7 @@
     </div>
 <div>
     <select name="MateriaAsignada" class="form-control form-control-sm">
-    <option value="#" selected>elija materia</option>
+    <option value="#" selected>Elija materia</option>
     <option value="<?php
       $enlace = mysqli_connect("localhost", "root", "","istic");
       $sql = "SELECT Idmateria FROM materias";
@@ -237,6 +250,7 @@
       $query = mysqli_query($enlace, $sql);
       while($resul=mysqli_fetch_assoc($query))
       {
+        /*echo "<option value=\"".$resul["Idmateria"]."\">".$resul["materia"]."</option>\n";*/
         echo $resul["materia"];
 
       }
