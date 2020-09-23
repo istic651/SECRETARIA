@@ -60,7 +60,7 @@ require_once 'conexion.php';
      //se valida que en el campo docente no tome valores como números
      if(preg_match($patron_texto, $nombre) && !preg_match($patron_numero, $nombre)){
         $enlace = mysqli_connect("localhost", "root", "", "istic");
-        $sql = "SELECT * FROM profesores";
+        $sql = "SELECT DNIProfesor FROM profesores";
         $resultados = mysqli_query($enlace, $sql);
         while($resultado=mysqli_fetch_assoc($resultados))
          {

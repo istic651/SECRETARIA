@@ -235,27 +235,15 @@
 <div>
     <select name="MateriaAsignada" class="form-control form-control-sm">
     <option value="#" selected>Elija materia</option>
-    <option value="<?php
+    <?php 
       $enlace = mysqli_connect("localhost", "root", "","istic");
-      $sql = "SELECT Idmateria FROM materias";
+      $sql = "SELECT Idmateria, materia FROM materias";
       $query = mysqli_query($enlace, $sql);
       while($resul=mysqli_fetch_assoc($query))
       {
-          echo $resul["Idmateria"];
+          echo'<option value="'.$resul['Idmateria'].'">'.  $resul['materia'].'</option>';
       }
-    ?>">
-    <?php
-      $enlace = mysqli_connect("localhost", "root", "","istic");
-      $sql = "SELECT materia FROM materias";
-      $query = mysqli_query($enlace, $sql);
-      while($resul=mysqli_fetch_assoc($query))
-      {
-        /*echo "<option value=\"".$resul["Idmateria"]."\">".$resul["materia"]."</option>\n";*/
-        echo $resul["materia"];
-
-      }
-    ?> 
-    </option>
+        ?>
     </select>
 </div>
 </div><!-- /.input group -->
