@@ -4,11 +4,23 @@ require_once 'conexion.php';
      public $profesorAsignado;
      public $materia;
      public $anio;
+     public $dia1;
+     public $dia2;
+     public $hora1;
+     public $hora2;
+     public $hora3;
+     public $hora4;
   
-     public function __construct($profesorAsignado, $materia, $anio) {
+     public function __construct($profesorAsignado, $materia, $anio, $dia1, $dia2, $hora1, $hora2, $hora3, $hora4) {
       $this->profesorAsignado = $profesorAsignado;
       $this->materia = $materia;
       $this->anio = $anio;
+      $this->dia1 = $dia1;
+      $this->dia2 = $dia2;
+      $this->hora1 = $hora1;
+      $this->hora2 = $hora2;
+      $this->hora3 = $hora3;
+      $this->hora4 = $hora4;
    }
      //función para guardar datos de las materias 
      public function enviar()
@@ -16,10 +28,16 @@ require_once 'conexion.php';
          $con = new Conexion();
          if($con)
         {
-             $consulta = $con->prepare('INSERT INTO materias(profesorAsignado, materia,    anio) VALUES(:profesorAsignado, :materia, :anio)');
+             $consulta = $con->prepare('INSERT INTO materias(profesorAsignado, materia,    anio, dia1, dia2, hora1, hora2, hora3, hora4) VALUES(:profesorAsignado, :materia, :anio, :dia1, :dia2, :hora1, :hora2, :hora3, :hora4)');
               $consulta->bindParam(':profesorAsignado', $this->profesorAsignado);
               $consulta->bindParam(':materia', $this->materia);
               $consulta->bindParam(':anio', $this->anio);
+              $consulta->bindParam(':dia1', $this->dia1);
+              $consulta->bindParam(':dia2', $this->dia2);
+              $consulta->bindParam(':hora1', $this->hora1);
+              $consulta->bindParam(':hora2', $this->hora2);
+              $consulta->bindParam(':hora3', $this->hora3);
+              $consulta->bindParam(':hora4', $this->hora4);
               $consulta->execute();
         
             $conexion = null;
@@ -35,6 +53,12 @@ require_once 'conexion.php';
         $docente = $_POST['docente'];
         $materia = $_POST['materia'];
         $anio = $_POST['anio'];
+        $dia1 = $_POST['dia1'];
+        $dia2 = $_POST['dia2'];
+        $hora1 = $_POST['hora1'];
+        $hora2 = $_POST['hora2'];
+        $hora3 = $_POST['hora3'];
+        $hora4 = $_POST['hora4'];
         $patron_texto = "/[a-zA-Z]/";
         $patron_numero = "/[0-9]/";
      //se valida que en el campo docente no tome valores como números
@@ -53,7 +77,7 @@ require_once 'conexion.php';
                  {
                $materias = $_POST['materia'];
                      if($row != $materias){
-                        $insert= new Materias($docente,$materia,$anio);
+                        $insert= new Materias($docente,$materia,$anio,$dia1,$dia2,$hora1,$hora2,$hora3,$hora4);
                         $insert->enviar();
                           header('Location: materias.php');
                      } else{
@@ -63,7 +87,7 @@ require_once 'conexion.php';
                  }
          }elseif($rows < 1)
          {
-             $insert= new Materias($docente,$materia,$anio);
+             $insert= new Materias($docente,$materia,$anio,$dia1,$dia2,$hora1,$hora2,$hora3,$hora4);
                         $insert->enviar();
                         header('Location: materias.php');
          }

@@ -17,7 +17,7 @@ require_once 'conexion.php';
       $this->edad = $edad;
       $this->telefonoProfesor = $telefonoProfesor;
       $this->materiaAsignada = $materiaAsignada;
-         
+   
    }
      //función para guardar datos de los docentes 
      public function enviar()
@@ -25,7 +25,7 @@ require_once 'conexion.php';
          $con = new Conexion();
          if($con)
         {
-             $consulta = $con->prepare('INSERT INTO profesores(nombreProfesor, apellidoProfesor, DNIProfesor, domicilio, edad, telefonoProfesor, materiaAsignada) VALUES(:nombreProfesor, :apellidoProfesor, :DNIProfesor, :domicilio, :edad, :telefonoProfesor, :materiaAsignada)');
+             $consulta = $con->prepare('INSERT INTO profesores(nombreProfesor, apellidoProfesor, DNIProfesor, domicilio, edad, telefonoProfesor, materiaAsignada, dia, hora) VALUES(:nombreProfesor, :apellidoProfesor, :DNIProfesor, :domicilio, :edad, :telefonoProfesor, :materiaAsignada');
              $consulta->bindParam(':nombreProfesor', $this->nombreProfesor);
              $consulta->bindParam(':apellidoProfesor', $this->apellidoProfesor);
              $consulta->bindParam(':DNIProfesor', $this->DNIProfesor);
@@ -74,7 +74,7 @@ require_once 'conexion.php';
                $DNI = $_POST['Dni'];
                if($row != $DNI){
                $insert= new inscripcionProfesores($nombre,$apellido,$dni,$domicilio,$edad,$telefono,
-                                                  $MateriaAsignada);
+                                                  $MateriaAsignada, $dia, $hora);
                $insert->enviar();
                header('Location: inscripcionProfesores.php');
                }else{
@@ -85,7 +85,7 @@ require_once 'conexion.php';
          }elseif($rows < 1)
          {
               $insert= new inscripcionProfesores($nombre,$apellido,$dni,$domicilio,$edad,$telefono,
-                                                 $MateriaAsignada);
+                                                 $MateriaAsignada, $dia, $hora);
               $insert->enviar();
               header('Location: inscripcionProfesores.php');
            }

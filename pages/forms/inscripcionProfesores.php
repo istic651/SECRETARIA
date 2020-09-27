@@ -226,16 +226,17 @@
                                             <input type="text" class="form-control" id="telefonoId" name="telefonoDocente" placeholder="Ingrese un telefono de contactodocente">
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->  
-<div class="form-group">
- <label>Materia Asignada</label>
- <div class="input-group">
-    <div class="input-group-addon">
-     <i class="fa fa-phone"></i>
-    </div>
-<div>
-    <select name="MateriaAsignada" class="form-control form-control-sm">
-    <option value="#" selected>Elija materia</option>
-    <?php 
+                                
+    <div class="form-group">
+     <label>Materia Asignada</label>
+     <div class="input-group">
+        <div class="input-group-addon">
+         <i class="fa fa-phone"></i>
+        </div>
+   <div>
+        <select name="MateriaAsignada" class="form-control form-control-sm">
+        <option value="#" selected>Elija materia</option>
+        <?php 
       $enlace = mysqli_connect("localhost", "root", "","istic");
       $sql = "SELECT Idmateria, materia FROM materias";
       $query = mysqli_query($enlace, $sql);
@@ -244,10 +245,10 @@
           echo'<option value="'.$resul['Idmateria'].'">'.  $resul['materia'].'</option>';
       }
         ?>
-    </select>
-</div>
-</div><!-- /.input group -->
-                                    </div><!-- /.form group -->
+        </select>
+    </div>
+    </div><!-- /.input group -->
+    </div><!-- /.form group -->
 
  </div><!-- /.box-body -->
 <div class="buttons">

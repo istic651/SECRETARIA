@@ -205,7 +205,67 @@
                                               </div>
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
-
+                                   <div class="form-group">
+                                       <label>día uno </label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-fw fa-pencil-square-o"></i> 
+                                            </div>
+                                            <input type="text" class="form-control"
+                                            id="dia1" name="dia1" placeholder="dia uno"/>
+                                        </div><!-- /.input group -->  
+                                    </div>
+                                    <div class="form-group">
+                                       <label>día dos </label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-fw fa-pencil-square-o"></i> 
+                                            </div>
+                                            <input type="text" class="form-control"
+                                            id="dia2" name="dia2" placeholder="dia dos"/>
+                                        </div><!-- /.input group -->  
+                                    </div>
+                                    <div class="form-group">
+                                       <label>horario día uno desde </label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-fw fa-pencil-square-o"></i> 
+                                            </div>
+                                            <input type="time" class="form-control"
+                                            id="hora1" name="hora1" placeholder="desde"/>
+                                        </div><!-- /.input group -->  
+                                    </div>
+                                    <div class="form-group">
+                                       <label>horario día uno hasta </label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-fw fa-pencil-square-o"></i> 
+                                            </div>
+                                            <input type="time" class="form-control"
+                                            id="hora2" name="hora2" placeholder="hasta"/>
+                                        </div><!-- /.input group -->  
+                                    </div>
+                                    <div class="form-group">
+                                       <label>horario día dos desde </label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-fw fa-pencil-square-o"></i> 
+                                            </div>
+                                            <input type="time" class="form-control"
+                                            id="hora3" name="hora3" placeholder="desde"/>
+                                        </div><!-- /.input group -->  
+                                    </div>
+                                    <div class="form-group">
+                                       <label>horario día dos hasta</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-fw fa-pencil-square-o"></i> 
+                                            </div>
+                                            <input type="time" class="form-control"
+                                            id="hora4" name="hora4" placeholder="hasta"/>
+                                        </div><!-- /.input group -->  
+                                    </div>
+                                    
                                 </div><!-- /.box-body -->
                                     <div class="buttons">
                                         <div>

@@ -250,6 +250,139 @@
                                                 </select>
                                               </div>
                                         </div><!-- /.input group -->
+                                      <div class="form-group">
+                                       <label>Día uno</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-fw fa-pencil-square-o"></i> 
+                                            </div>
+                                            <input type="text" class="form-control"
+                                            id="dia1" name="dia1" placeholder="dia1" value="
+      <?php
+  $enlace = mysqli_connect("localhost", "root", "","istic");
+  $cod = $_GET["no"];
+  $sql = "SELECT * FROM materias WHERE Idmateria = '$cod'";
+  $query = mysqli_query($enlace, $sql);
+  while($resul=mysqli_fetch_assoc($query))
+  {
+      echo $resul['dia1'];
+  }
+                                                   ?>                                      
+                                            "/>
+                                        </div>
+
+                                        <!-- /.input group -->
+                                    </div>
+                                        <div class="form-group">
+                                       <label>Día dos</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-fw fa-pencil-square-o"></i> 
+                                            </div>
+                                            <input type="text" class="form-control"
+                                            id="dia2" name="dia2" placeholder="dia1" value="
+      <?php
+  $enlace = mysqli_connect("localhost", "root", "","istic");
+  $cod = $_GET["no"];
+  $sql = "SELECT * FROM materias WHERE Idmateria = '$cod'";
+  $query = mysqli_query($enlace, $sql);
+  while($resul=mysqli_fetch_assoc($query))
+  {
+      echo $resul['dia2'];
+  }
+                                                   ?>                                      
+                                            "/>
+                                        </div>
+ <div class="form-group">
+                                       <label>hora día uno desde</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-fw fa-pencil-square-o"></i> 
+                                            </div>
+                                            <input type="time" class="form-control"
+                                            id="hora1" name="hora1" placeholder="dia1" value="
+      <?php
+  $enlace = mysqli_connect("localhost", "root", "","istic");
+  $cod = $_GET["no"];
+  $sql = "SELECT * FROM materias WHERE Idmateria = '$cod'";
+  $query = mysqli_query($enlace, $sql);
+  while($resul=mysqli_fetch_assoc($query))
+  {
+      echo $resul['hora1'];
+  }
+                                                   ?>                                      
+                                            "/>
+                                        </div>
+                                        <!-- /.input group -->
+                                    </div>
+                                     <div class="form-group">
+                                       <label>hora día uno hasta</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-fw fa-pencil-square-o"></i> 
+                                            </div>
+                                            <input type="time" class="form-control"
+                                            id="hora2" name="hora2" placeholder="dia1" value="
+      <?php
+  $enlace = mysqli_connect("localhost", "root", "","istic");
+  $cod = $_GET["no"];
+  $sql = "SELECT * FROM materias WHERE Idmateria = '$cod'";
+  $query = mysqli_query($enlace, $sql);
+  while($resul=mysqli_fetch_assoc($query))
+  {
+      echo $resul['hora2'];
+  }
+                                                   ?>                                      
+                                            "/>
+                                        </div>
+                                        <!-- /.input group -->
+                                    </div>
+                                            <div class="form-group">
+                                       <label>hora día dos desde</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-fw fa-pencil-square-o"></i> 
+                                            </div>
+                                            <input type="time" class="form-control"
+                                            id="hora3" name="hora3" placeholder="dia3" value="
+      <?php
+  $enlace = mysqli_connect("localhost", "root", "","istic");
+  $cod = $_GET["no"];
+  $sql = "SELECT * FROM materias WHERE Idmateria = '$cod'";
+  $query = mysqli_query($enlace, $sql);
+  while($resul=mysqli_fetch_assoc($query))
+  {
+      echo $resul['hora3'];
+  }
+                                                   ?>                                      
+                                            "/>
+                                        </div>
+                                        <!-- /.input group -->
+                                    </div>
+                                         <div class="form-group">
+                                       <label>hora día dos hasta</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-fw fa-pencil-square-o"></i> 
+                                            </div>
+                                            <input type="time" class="form-control"
+                                            id="hora4" name="hora4" placeholder="dia1" value="
+      <?php
+  $enlace = mysqli_connect("localhost", "root", "","istic");
+  $cod = $_GET["no"];
+  $sql = "SELECT * FROM materias WHERE Idmateria = '$cod'";
+  $query = mysqli_query($enlace, $sql);
+  while($resul=mysqli_fetch_assoc($query))
+  {
+      echo $resul['hora4'];
+  }
+                                                   ?>                                      
+                                            "/>
+                                        </div>
+                                        <!-- /.input group -->
+                                    </div>
+                                            
+                                    </div>
                                     </div><!-- /.form group -->
    <div class="buttons">
                                         <div>

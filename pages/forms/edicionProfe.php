@@ -289,55 +289,18 @@
                                                 <i class="fa fa-phone"></i>
                                             </div>
                                               <div>
-                                                <select name="materiaDocente" class="form-control form-control-sm">
-                                                    <option value="
-<?php
-  $enlace = mysqli_connect("localhost", "root", "","istic");
-  $cod = $_GET["no"];
-  $mat = $_GET["ma"];
-  $sql = "SELECT * FROM profesores WHERE materiaAsignada = '$cod'";
-  $query = mysqli_query($enlace, $sql);
-  while($resul=mysqli_fetch_assoc($query))
-  {
-      echo $resul['materiaAsignada'];
-  }
-                                                   ?> 
-                                                        " selected>
-                                                        <?php
-  $enlace = mysqli_connect("localhost", "root", "","istic");
-  $cod = $_GET["no"];
-  $mat = $_GET["ma"];
-  $sql = "SELECT materia FROM materias WHERE Idmateria = '$cod'";
-  $query = mysqli_query($enlace, $sql);
-  while($resul=mysqli_fetch_assoc($query))
-  {
-    echo $resul["materia"];
-      
-  }
-   
-                                                   ?> 
-                                                        </option>
-                                                         <option value="<?php
-  $enlace = mysqli_connect("localhost", "root", "","istic");
-  $sql = "SELECT * FROM materias";
-  $query = mysqli_query($enlace, $sql);
-  while($resul=mysqli_fetch_assoc($query))
-  {
-      echo $resul['Idmateria'];
-  }
-                                                   ?> "><?php
-  $enlace = mysqli_connect("localhost", "root", "","istic");
-  $sql = "SELECT * FROM materias";
-  $query = mysqli_query($enlace, $sql);
-  while($resul=mysqli_fetch_assoc($query))
-  {
-    echo $resul['materia'];
-      
-  }
-   
-                                                   ?> </option>
-                                                          
-                                                </select>
+    <select name="materiaDocente" class="form-control form-control-sm">
+    <option value="#" selected>Elija materia</option>
+    <?php 
+      $enlace = mysqli_connect("localhost", "root", "","istic");
+      $sql = "SELECT Idmateria, materia FROM materias";
+      $query = mysqli_query($enlace, $sql);
+      while($resul=mysqli_fetch_assoc($query))
+      {
+          echo'<option value="'.$resul['Idmateria'].'">'.  $resul['materia'].'</option>';
+      }
+        ?>
+    </select>
                                               </div>
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->

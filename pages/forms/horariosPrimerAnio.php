@@ -166,6 +166,450 @@
                                     <!--The calendar -->
                                    <img src="HorarioPrimerA%C3%B1o.jpg">
                                 </div><!-- /.box-body -->
+                                <div class="horarios">
+                                <div class="titulo"><h1>Horarios primer año segundo cuatrismestre</h1></div>
+                                <div class="primerCuatri">
+                                <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Horarios</th>
+      <th scope="col">Lunes</th>
+      <th scope="col">Martes</th>
+      <th scope="col">Miercoles</th>
+      <th scope="col">Jueves</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">18:30/19:10</th>
+      <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "lunes" and $resultado['hora1'] == "18:30:00" and 
+             $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+        
+          ?>
+        </td>
+
+    <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "martes" and $resultado['hora1'] == "18:30:00" and 
+             $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+        
+          ?>
+        </td>
+
+    <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "miercoles" || $resultado['dia2'] == "miercoles" and $resultado['hora1'] == "18:30:00" || $resultado['hora2'] == "18:30:00" and $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+        
+          ?>
+    </td>
+
+         <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "jueves" || $resultado['dia2'] == "jueves" and $resultado['hora1'] == "18:30:00" || $resultado['hora3'] == "18:30:00" and $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+        
+          ?>
+    </td>
+
+                                    
+    </tr>
+   <tr>
+      <th scope="row">19:10/19:45</th>
+       <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "lunes" and $resultado['hora1'] == "18:30:00" and $resultado['hora2'] == "20:35:00" and $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+        
+          ?>
+        </td>
+          <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "martes" || $resultado['dia2'] == "martes" and $resultado['hora1'] == "18:30:00" and $resultado['hora2'] == "19:45:00" and 
+              $resultado['anio'] == 1)
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+        
+          ?>
+        </td>
+    <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "miercoles" || $resultado['dia2'] == "miercoles" and $resultado['hora1'] == "18:30:00" and $resultado['hora2'] == "20:35:00" || $resultado['hora3'] == "18:30:00" and $resultado['hora4'] == "20:35:00" and 
+              $resultado['anio'] == 1)
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+        
+          ?>
+        </td>
+        <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "jueves" || $resultado['dia2'] == "jueves" and $resultado['hora1'] == "18:30:00" and $resultado['hora2'] == "20:35:00" || $resultado['hora3'] == "18:30:00" and $resultado['hora4'] == "20:35:00" and 
+              $resultado['anio'] == 1)
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+        
+          ?>
+        </td>
+                                    
+    </tr>
+    <tr>
+      <th scope="row">19:55/20:35</th>
+      <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "lunes" and $resultado['hora1'] == "18:30:00" and $resultado['hora2'] == "20:35:00" and $resultado['anio'] == 1 )
+            {
+
+                   echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+          ?>
+        </td>
+    <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "martes" and $resultado['hora1'] == "19:55:00" and $resultado['hora2'] == "21:10:00" and $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+          ?>
+        </td>
+    
+      <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "miercoles" || $resultado['dia2'] == "miercoles" and $resultado['hora1'] == "18:30:00" and $resultado['hora2'] == "20:35:00" || $resultado['hora3'] == "18:30:00" and $resultado['hora4'] == "20:35:00" and $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+          ?>
+        </td>
+    <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "jueves" || $resultado['dia2'] == "jueves" and $resultado['hora1'] == "18:30:00" and $resultado['hora2'] == "20:35:00" || $resultado['hora3'] == "18:30:00" and $resultado['hora4'] == "20:35:00" and $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+          ?>
+        </td>
+    </tr>
+    <tr>
+      <th scope="row">20:35/21:15</th>
+      <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "lunes" and $resultado['hora1'] == "20:35:00" and $resultado['hora2'] == "22:30:00" and $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+          ?>
+        </td>
+        <td>
+        <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "martes" and $resultado['hora1'] == "19:55:00" and $resultado['hora2'] == "21:10:00" and $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+          ?>
+        </td>
+         <td>
+        <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "miercoles" and $resultado['hora1'] == "20:35:00" and $resultado['hora2'] == "22:30:00" and $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+          ?>
+        </td>
+        <td>
+        <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "jueves" and $resultado['hora1'] == "20:35:00" and $resultado['hora2'] == "22:30:00" and $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+            elseif($resultado['dia2'] == "jueves" and $resultado['hora3'] == "20:35:00" and $resultado['hora4'] == "22:30:00" and $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+          ?>
+        </td>
+        
+    </tr>
+    <tr>
+      <th scope="row">21:15/22:30</th>
+     <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "lunes" and $resultado['hora1'] == "20:35:00" and $resultado['hora2'] == "22:30:00" and $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+          ?>
+        </td>
+      <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "martes" and $resultado['hora1'] == "21:15:00" and $resultado['hora2'] == "22:30:00")
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            }elseif($resultado['dia2'] == "martes" and $resultado['hora3'] == "21:15:00" and $resultado['hora4'] == "22:30:00" and $resultado['anio'] == 1 )
+            {
+               echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            }
+        }
+          ?>
+        </td>
+       <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "miercoles" and $resultado['hora1'] == "20:35:00" and $resultado['hora2'] == "22:30:00")
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            }elseif($resultado['dia2'] == "miercoles" and $resultado['hora3'] == "20:35:00" and $resultado['hora4'] == "22:30:00" and $resultado['anio'] == 1 )
+            {
+               echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            }
+        }
+          ?>
+        </td>
+      <td>
+        <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "jueves" and $resultado['hora1'] == "20:35:00" and $resultado['hora2'] == "22:30:00" and $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+            elseif($resultado['dia2'] == "jueves" and $resultado['hora3'] == "20:35:00" and $resultado['hora4'] == "22:30:00" and $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+          ?>
+        </td>
+    </tr>
+     <tr>
+      <th scope="row">21:15/22:30</th>
+     <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "lunes" and $resultado['hora1'] == "20:35:00" and $resultado['hora2'] == "22:30:00" and $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+          ?>
+        </td>
+      <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "martes" and $resultado['hora1'] == "21:15:00" and $resultado['hora2'] == "22:30:00")
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            }elseif($resultado['dia2'] == "martes" and $resultado['hora3'] == "21:15:00" and $resultado['hora4'] == "22:30:00" and $resultado['anio'] == 1 )
+            {
+               echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            }
+        }
+          ?>
+        </td>
+       <td>
+      <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "miercoles" and $resultado['hora1'] == "20:35:00" and $resultado['hora2'] == "22:30:00")
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            }elseif($resultado['dia2'] == "miercoles" and $resultado['hora3'] == "20:35:00" and $resultado['hora4'] == "22:30:00" and $resultado['anio'] == 1 )
+            {
+               echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            }
+        }
+          ?>
+        </td>
+      <td>
+        <?php 
+        $enlace = mysqli_connect("localhost", "root", "", "istic");
+        $sql = "SELECT * FROM materias";
+        $resultados = mysqli_query($enlace, $sql);
+        while($resultado = mysqli_fetch_assoc($resultados))
+        {
+            if($resultado['dia1'] == "jueves" and $resultado['hora1'] == "20:35:00" and $resultado['hora2'] == "22:30:00" and $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+            elseif($resultado['dia2'] == "jueves" and $resultado['hora3'] == "20:35:00" and $resultado['hora4'] == "22:30:00" and $resultado['anio'] == 1 )
+            {
+
+                    echo $resultado['materia']."<br>".$resultado['profesorAsignado'];
+            } 
+        }
+          ?>
+        </td>
+    </tr>
+  </tbody>
+</table>
+                                    </div>
+                                      </div>
                             </div><!-- /.box -->
                                 
                          </div><!-- /.box -->
@@ -176,7 +620,7 @@
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
 
-
+ 
         <!-- jQuery 2.0.2 -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <!-- Bootstrap -->
