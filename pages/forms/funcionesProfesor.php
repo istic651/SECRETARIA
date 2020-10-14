@@ -9,7 +9,8 @@ require_once 'conexion.php';
      public $telefonoProfesor;
      public $materiaAsignada;
   
-     public function __construct($nombreProfesor, $apellidoProfesor, $DNIProfesor, $domicilio, $edad,$telefonoProfesor, $materiaAsignada) {
+     public function __construct($nombreProfesor, $apellidoProfesor, $DNIProfesor, $domicilio, $edad, $telefonoProfesor, $materiaAsignada)
+     {
       $this->nombreProfesor = $nombreProfesor;
       $this->apellidoProfesor = $apellidoProfesor;
       $this->DNIProfesor = $DNIProfesor;
@@ -25,7 +26,7 @@ require_once 'conexion.php';
          $con = new Conexion();
          if($con)
         {
-             $consulta = $con->prepare('INSERT INTO profesores(nombreProfesor, apellidoProfesor, DNIProfesor, domicilio, edad, telefonoProfesor, materiaAsignada, dia, hora) VALUES(:nombreProfesor, :apellidoProfesor, :DNIProfesor, :domicilio, :edad, :telefonoProfesor, :materiaAsignada');
+             $consulta = $con->prepare('INSERT INTO profesores(nombreProfesor, apellidoProfesor, DNIProfesor, domicilio, edad, telefonoProfesor, materiaAsignada) VALUES(:nombreProfesor, :apellidoProfesor, :DNIProfesor, :domicilio, :edad, :telefonoProfesor, :materiaAsignada)');
              $consulta->bindParam(':nombreProfesor', $this->nombreProfesor);
              $consulta->bindParam(':apellidoProfesor', $this->apellidoProfesor);
              $consulta->bindParam(':DNIProfesor', $this->DNIProfesor);
@@ -34,19 +35,14 @@ require_once 'conexion.php';
              $consulta->bindParam(':telefonoProfesor', $this->telefonoProfesor);
              $consulta->bindParam(':materiaAsignada', $this->materiaAsignada);
              $consulta->execute();
+             
              $conexion = null;
      }
    }
  
  }
 //se comprueba si existen las variables en el form y que estén completas
- if(isset($_POST["Nombre"]) && !empty($_POST["Nombre"])and 
-    isset($_POST["Apellido"]) && !empty($_POST["Apellido"])and
-    isset($_POST["Dni"]) && !empty($_POST["Dni"])and
-    isset($_POST["Domicilio"]) && !empty($_POST["Domicilio"])and
-    isset($_POST["edadDocente"]) && !empty($_POST["edadDocente"]) and
-    isset($_POST["telefonoDocente"]) && !empty($_POST["telefonoDocente"])and
-    isset($_POST["MateriaAsignada"]) && !empty($_POST["MateriaAsignada"]))
+ if(isset($_POST["Nombre"]) && !empty($_POST["Nombre"])and isset($_POST["Apellido"]) && !empty($_POST["Apellido"]) and isset($_POST["Dni"]) && !empty($_POST["Dni"]) and isset($_POST["Domicilio"]) && !empty($_POST["Domicilio"])and isset($_POST["edadDocente"]) && !empty($_POST["edadDocente"])and isset($_POST["telefonoDocente"]) && !empty($_POST["telefonoDocente"])and isset($_POST["MateriaAsignada"]) && !empty($_POST["MateriaAsignada"]))
     {     
         $nombre = $_POST["Nombre"];
         $apellido = $_POST["Apellido"];
@@ -71,11 +67,10 @@ require_once 'conexion.php';
              //validacion para que no se carguen docentes repetidos
            foreach($rows as $row)
                  {   
-               $DNI = $_POST['Dni'];
-               if($row != $DNI){
-               $insert= new inscripcionProfesores($nombre,$apellido,$dni,$domicilio,$edad,$telefono,
-                                                  $MateriaAsignada, $dia, $hora);
-               $insert->enviar();
+                   $DNI = $_POST['Dni'];
+                   if($row != $DNI){
+                   $insert= new inscripcionProfesores($nombre,$apellido,$dni,$domicilio,$edad,$telefono, $MateriaAsignada);
+                   $insert->enviar();
                header('Location: inscripcionProfesores.php');
                }else{
                          echo "fallastes";
@@ -84,8 +79,7 @@ require_once 'conexion.php';
                }
          }elseif($rows < 1)
          {
-              $insert= new inscripcionProfesores($nombre,$apellido,$dni,$domicilio,$edad,$telefono,
-                                                 $MateriaAsignada, $dia, $hora);
+             $insert= new inscripcionProfesores($nombre,$apellido,$dni,$domicilio,$edad,$telefono,$MateriaAsignada);
               $insert->enviar();
               header('Location: inscripcionProfesores.php');
            }
