@@ -6,15 +6,16 @@ require_once '../forms/conexion.php';
      public $domicilio;
      public $telefono;
      public $email;
-     public $materiasIngresado;
+     public $anio;
   
-     public function __construct($nombreAlumno, $apellidoAlumno, $domicilio, $telefono, $email, $materiasIngresado) {
+     public function __construct($nombreAlumno, $apellidoAlumno, $domicilio, $telefono, $email,
+                                 $anio) {
       $this->nombreAlumno = $nombreAlumno;
       $this->apellidoAlumno = $apellidoAlumno;
       $this->domicilio = $domicilio;
       $this->telefono = $telefono;
       $this->email = $email;
-      $this->materiasIngresado = $materiasIngresado;
+      $this->anio = $anio;
    }
      //función para guardar datos de las materias 
      public function enviar()
@@ -22,13 +23,13 @@ require_once '../forms/conexion.php';
          $con = new Conexion();
          if($con)
         {
-             $consulta = $con->prepare('INSERT INTO alumnos(nombreAlumno, apellidoAlumno, domicilio, telefono, email, materiasIngresado) VALUES(:nombreAlumno, :apellidoAlumno, :domicilio, :telefono, :email, :materiasIngresado)');
+             $consulta = $con->prepare('INSERT INTO alumnos(nombreAlumno, apellidoAlumno, domicilio, telefono, email, anio) VALUES(:nombreAlumno, :apellidoAlumno, :domicilio, :telefono, :email, :anio)');
               $consulta->bindParam(':nombreAlumno', $this->nombreAlumno);
               $consulta->bindParam(':apellidoAlumno', $this->apellidoAlumno);
               $consulta->bindParam(':domicilio', $this->domicilio);
               $consulta->bindParam(':telefono', $this->telefono);
               $consulta->bindParam(':email', $this->email);
-              $consulta->bindParam(':materiasIngresado', $this->materiasIngresado);
+              $consulta->bindParam(':anio', $this->anio);
               $consulta->execute();
         
             $conexion = null;
@@ -41,16 +42,15 @@ require_once '../forms/conexion.php';
  if(isset($_POST["nombre"]) && !empty($_POST["nombre"])and 
     isset($_POST["apellido"]) && !empty($_POST["apellido"])and  
     isset($_POST["domicilio"]) && !empty($_POST["domicilio"])and     
-    isset($_POST["telefono"]) && !empty($_POST["telefono"])and     
-    isset($_POST["email"]) && !empty($_POST["email"])and
-    isset($_POST["materia"]) && !empty($_POST["materia"]))
+    isset($_POST["telefono"]) && !empty($_POST["telefono"])and
+    isset($_POST["email"]) && !empty($_POST["email"]))
     {     
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
         $domicilio = $_POST['domicilio'];
         $telefono = $_POST['telefono'];
         $email = $_POST['email'];
-        $materia = $_POST['materia'];
+        $anio = $_POST['anio'];
         $patron_texto = "/[a-zA-Z]/";
         $patron_numero = "/[0-9]/";
      //se valida que en el campo docente no tome valores como números
@@ -58,18 +58,19 @@ require_once '../forms/conexion.php';
          $enlace = mysqli_connect("localhost", "root", "", "istic");
          $sql = "SELECT email FROM alumnos";
          $resultados = mysqli_query($enlace, $sql);
+  
          while($resultado=mysqli_fetch_assoc($resultados))
          {
-                 $rows = $resultado;
+                $rows = $resultado;
                 
          }
          if($rows > 0){
              //validacion para que no se carguen materias repetidas
            foreach($rows as $row)
                  {
-                    $emails = $_POST['email'];
-                     if($row != $emails){
-                        $insert= new Alumno($nombre,$apellido,$domicilio,$telefono,$email,$materia);
+                    $email = $_POST['email'];
+                     if($row != $email){
+                        $insert= new Alumno($nombre,$apellido,$domicilio,$telefono,$email,$anio);
                         $insert->enviar();
                           header('Location: alumnos.php');
                      } else{
@@ -79,7 +80,7 @@ require_once '../forms/conexion.php';
                  }
          }elseif($rows < 1)
          {
-             $insert= new Alumno($nombre,$apellido,$domicilio,$telefono,$email,$materia);
+             $insert= new Alumno($nombre,$apellido,$domicilio,$telefono,$email,$anio);
                         $insert->enviar();
                         header('Location: alumnos.php');
          }
@@ -102,7 +103,6 @@ require_once '../forms/conexion.php';
                                             <td>'.$resultado["domicilio"].'</td>
                                             <td>'.$resultado["telefono"].'</td>
                                             <td>'.$resultado["email"].'</td>
-                                            <td>'.$resultado["materiasIngresado"].'</td>
                                             <td>'.'<a href="edicion.php?no='.$resultado['IdAlumno'].'"><button type="button" name = "modificar" class="btn btn-primary">'."Modificar".'</button></a>'.'</td>'
                                            .'<td>'.'<a href=eliminar.php?lo='.$resultado['IdAlumno'].'"><button type="button" name ="elimina" class="btn btn-danger" >'."Eliminar".'</button></a>'.'</td>'
                                            .

@@ -219,14 +219,18 @@
                                             id="emailId" name="email" placeholder="Ingrese email"/>
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
-                                     <div class="form-group">
-                                       <label>Materias Ingresadas</label>
+                                    <div class="form-group">
+                                       <label>Ingresa el año</label>
                                         <div class="input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-fw fa-pencil-square-o"></i> 
                                             </div>
-                                            <input type="number" class="form-control"
-                                            id="materiasId" name="materia" placeholder="Ingrese Mat."/>
+                                            <select name="anio" class="form-control form-control-sm">
+                                                  <option value="#" selected>Elija el año</option> 
+                                                  <option value="1">primero</option> 
+                                                  <option value="2">segundo</option>
+                                                  <option value="3">tercero</option>
+                                            </select>
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
  
