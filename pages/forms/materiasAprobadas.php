@@ -20,7 +20,7 @@
         <link href="../../css/timepicker/bootstrap-timepicker.min.css" rel="stylesheet"/>
         <!-- Theme style -->
         <link href="../../css/AdminLTE.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/estilos.css">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -387,7 +387,9 @@
                         </div>
                                 </div>
                                     <div class="buttons">
+                                       <div class="buttonsuno">
                                         <button type="submit" class="btn btn-primary" name="uno">Enviar</button>
+                                        </div>
                                     </div>         
                                 </form>
                                 
@@ -397,12 +399,11 @@
                     </div><!-- /.row --> 
                       <div>
                        <form action="aprobadas.php" method="post">
+                       <div>
                         <div class="buttonsdos">
-                                       <div>
-                                        <button type="submit" class="btn btn-primary" name="enviamos">Enviar</button>
-                                       </div>
+                                        <button type="submit" class="btn btn-primary" name="enviamos">upload</button> 
                         </div> 
-                                              
+                       </div>                       
 <div class="box">
                                 <div class="box-header">
                                     <h3 class="box-title">Notas de los Alumnos</h3>                                    
