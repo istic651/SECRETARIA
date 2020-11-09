@@ -266,27 +266,7 @@
                                             ">
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
-                                     <div class="form-group">
-                                        <label>Materias Ingresadas</label>
-                                        <div class="input-group">
-                                            <div class="input-group-addon">
-                                                <i class="fa fa-fw fa-male"></i>
-                                            </div>
-                                            <input type="number" class="form-control" id="materiasId" name="materia" placeholder="Ingrese Materias" 
-                                            value="
-                                            <?php
-  $enlace = mysqli_connect("localhost", "root", "","istic");
-  $cod = $_GET["no"];
-  $sql = "SELECT * FROM alumnos WHERE IdAlumno = '$cod'";
-  $query = mysqli_query($enlace, $sql);
-  while($resul=mysqli_fetch_assoc($query))
-  {
-      echo $resul['materiasIngresado'];
-  }
-                                                   ?>
-                                            ">
-                                        </div><!-- /.input group -->
-                                    </div><!-- /.form group -->
+                                  <!-- /.form group -->
    <div class="buttons">
                                         <div>
                                            <button type="submit" class="btn btn-primary" name="actualiza">Enviar</button>
