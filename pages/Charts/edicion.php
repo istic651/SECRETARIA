@@ -64,7 +64,7 @@
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li class="treeview active">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-bar-chart-o"></i>
                                 <span>Horarios Clases</span>
@@ -76,7 +76,7 @@
                                 <li><a href="../forms/horariosTercerAnio.php"><i class="fa fa-angle-double-right"></i>Tercer Año</a></li>
                             </ul>
                         </li>
-                        <li class="treeview active">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-bar-chart-o"></i>
                                 <span>Alumnos</span>
@@ -86,7 +86,7 @@
                                 <li class="active"><a href="alumnos.php"><i class="fa fa-angle-double-right"></i>Inscripcion Alumnos</a></li>
                             </ul>
                         </li>
-                        <li class="treeview active">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-bar-chart-o"></i>
                                 <span>Profesores</span>
@@ -116,8 +116,8 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Edición de materias
-                        <small>Modique la materia elegida</small>
+                        Edición de alumnos
+                        <small>Modique el alumno elegido</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -133,7 +133,7 @@
 
                             <div class="box box-danger">
                                 <div class="box-header">
-                                    <h3 class="box-title">Datos de la materia</h3>
+                                    <h3 class="box-title">Datos del alumno</h3>
                                 </div>
                                 <form action="editar.php" method="post">
                                 <div class="box-body">
