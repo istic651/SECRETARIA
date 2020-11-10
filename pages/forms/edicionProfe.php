@@ -100,8 +100,8 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../forms/materias.php"><i class="fa fa-angle-double-right"></i> Materias</a></li>
-                                <li><a href="../forms/materiasAprobadas.php"><i class="fa fa-angle-double-right"></i> Materias Aprobadas</a></li>      
+                                <li><a href="materias.php"><i class="fa fa-angle-double-right"></i> Materias</a></li>
+                                <li><a href="materiasAprobadas.php"><i class="fa fa-angle-double-right"></i> Materias Aprobadas</a></li>      
                             </ul>
                     </ul>
                 </section>

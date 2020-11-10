@@ -114,7 +114,6 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="pages/forms/materias.php"><i class="fa fa-angle-double-right"></i> Materias</a></li>
-                                <li><a href="pages/forms/materiasCorrelativas.php"><i class="fa fa-angle-double-right"></i> Materias correlativas</a></li>
                                 <li><a href="pages/forms/materiasAprobadas.php"><i class="fa fa-angle-double-right"></i> Materias aprobadas</a></li>
                             </ul>
                         </li>
