@@ -93,7 +93,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="inscripcionProfesores.php"><i class="fa fa-angle-double-right"></i> Inscripción Alumnos</a></li>
+                                <li><a href="../Charts/alumnos.php"><i class="fa fa-angle-double-right"></i> Inscripción Alumnos</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
