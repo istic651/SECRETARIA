@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>AdminLTE | Morris.js Charts</title>
+        <title>Sistema de Gestión | ISTIC</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -15,19 +15,13 @@
         <!-- Theme style -->
         <link href="../../css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
     </head>
     <body class="skin-black">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="../../index.html" class="logo">
+            <a href="../../index.php" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
-                AdminLTE
+                ISTIC
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">
@@ -52,7 +46,7 @@
                             <img src="../../img/avatar3.png" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
-                            <p>Hello, Jane</p>
+                            <p>Juan</p>
 
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
@@ -69,7 +63,7 @@
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li class="treeview active">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-bar-chart-o"></i>
                                 <span>Horarios Clases</span>
@@ -81,19 +75,17 @@
                                 <li><a href="../forms/horariosTercerAnio.php"><i class="fa fa-angle-double-right"></i>Tercer Año</a></li>
                             </ul>
                         </li>
-                        <li class="treeview active">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-bar-chart-o"></i>
                                 <span>Alumnos</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li class="active"><a href="alumnos.php"><i class="fa fa-angle-double-right"></i>Inscripcion Alumno</a></li>
-                                <li><a href="../forms/horariosSegundoAnio.php"><i class="fa fa-angle-double-right"></i>Modificacion Alumno</a></li>
-                                <li><a href="../forms/horariosTercerAnio.php"><i class="fa fa-angle-double-right"></i>Situacion Alumno</a></li>
+                                <li class="active"><a href="alumnos.php"><i class="fa fa-angle-double-right"></i>Inscripcion Alumnos</a></li>
                             </ul>
                         </li>
-                        <li class="treeview active">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-bar-chart-o"></i>
                                 <span>Profesores</span>
@@ -101,20 +93,6 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li class="active"><a href="../forms/inscripcionProfesores.php"><i class="fa fa-angle-double-right"></i>Inscripcion Profesores</a></li>
-                                <li><a href="flot.html"><i class="fa fa-angle-double-right"></i> Modificación Profesores</a></li>
-                                <li><a href="inline.html"><i class="fa fa-angle-double-right"></i> Situación Profesores</a></li>
-                            </ul>
-                        </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-laptop"></i>
-                                <span>Mesa de Examenes</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="../UI/general.html"><i class="fa fa-angle-double-right"></i> Inscripciones</a></li>
-                                <li><a href="../UI/icons.html"><i class="fa fa-angle-double-right"></i> Horarios Mesa de Examen</a></li>
-                                <li><a href="../UI/buttons.html"><i class="fa fa-angle-double-right"></i> Alumnos Inscriptos</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -124,8 +102,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="../forms/materias.php"><i class="fa fa-angle-double-right"></i> Materias</a></li>
-                                <li><a href="../forms/advanced.html"><i class="fa fa-angle-double-right"></i> Materias Correlativas</a></li>
-                                
+                                <li><a href="../forms/materiasAprobadas.php"><i class="fa fa-angle-double-right"></i> Materias Aprobadas</a></li>
                             </ul>
                         </li>
                        

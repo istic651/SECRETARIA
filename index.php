@@ -23,12 +23,6 @@
         <!-- Theme style -->
         <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
     </head>
     <body class="skin-black">
         <!-- header logo: style can be found in header.less -->
@@ -101,8 +95,6 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="pages/Charts/alumnos.php"><i class="fa fa-angle-double-right"></i> Inscripción Alumnos</a></li>
-                                <li><a href="pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> Modificación Alumnos</a></li>
-                                <li><a href="pages/charts/inline.html"><i class="fa fa-angle-double-right"></i> Situación Alumnos</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -113,19 +105,6 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="pages/forms/inscripcionProfesores.php"><i class="fa fa-angle-double-right"></i> Inscripción Profesores</a></li>
-                                <li><a href="pages/UI/icons.html"><i class="fa fa-angle-double-right"></i> Modificación Profesores</a></li>
-                                <li><a href="pages/UI/buttons.html"><i class="fa fa-angle-double-right"></i> Situación Profesores</a></li>
-                            </ul>
-                        </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-edit"></i> <span>Mesa de Examenes</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="pages/forms/general.html"><i class="fa fa-angle-double-right"></i> Inscripciones</a></li>
-                                <li><a href="pages/forms/advanced.html"><i class="fa fa-angle-double-right"></i> Horarios Mesa Examen</a></li>
-                                <li><a href="pages/forms/editors.html"><i class="fa fa-angle-double-right"></i> Alumnos Inscriptos</a></li>
                             </ul>
                         </li>
                      <li class="treeview">
@@ -135,7 +114,8 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="pages/forms/materias.php"><i class="fa fa-angle-double-right"></i> Materias</a></li>
-                                <li><a href="pages/forms/materiasCorrelativas.php"><i class="fa fa-angle-double-right"></i> Materias correlitavas</a></li>
+                                <li><a href="pages/forms/materiasCorrelativas.php"><i class="fa fa-angle-double-right"></i> Materias correlativas</a></li>
+                                <li><a href="pages/forms/materiasAprobadas.php"><i class="fa fa-angle-double-right"></i> Materias aprobadas</a></li>
                             </ul>
                         </li>
                     </ul>
